@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:id="@+id/btnKembali034" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="‹ Kembali" android:textColor="#007AFF"
+            android:textSize="16sp" android:padding="4dp" android:layout_marginBottom="8dp"/>
+        <TextView android:id="@+id/tvJudul034" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Detail Transaksi"
+            android:textSize="28sp" android:textStyle="bold" android:textColor="#1C1C1E"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp" android:layout_marginTop="16dp"
+            android:background="@drawable/bg_glass">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Jenis" android:textSize="12sp" android:textColor="#6E6E73"/>
+            <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="4dp">
+                <RadioButton android:id="@+id/rbKeluar034" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:text="Pengeluaran"/>
+                <RadioButton android:id="@+id/rbMasuk034" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:text="Pemasukan"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="Jumlah (Rp)" android:textSize="12sp"
+                android:textColor="#6E6E73"/>
+            <EditText android:id="@+id/etJumlah034" style="@style/Glass.Input"
+                android:layout_marginTop="6dp" android:hint="Contoh: 50000"
+                android:inputType="number" android:maxLength="13"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="Kategori" android:textSize="12sp"
+                android:textColor="#6E6E73"/>
+            <EditText android:id="@+id/etKategori034" style="@style/Glass.Input"
+                android:layout_marginTop="6dp" android:hint="Contoh: Makan, Gaji, Transport"
+                android:inputType="textCapSentences"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="Keterangan" android:textSize="12sp"
+                android:textColor="#6E6E73"/>
+            <EditText android:id="@+id/etKeterangan034" style="@style/Glass.Input"
+                android:layout_marginTop="6dp" android:hint="Opsional"
+                android:inputType="textCapSentences"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="Tanggal" android:textSize="12sp"
+                android:textColor="#6E6E73"/>
+            <TextView android:id="@+id/tvTanggal034" android:layout_width="match_parent"
+                android:layout_height="52dp" android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input" android:gravity="center_vertical"
+                android:paddingStart="16dp" android:paddingEnd="16dp" android:textColor="#1C1C1E"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSimpan034"
+            style="@style/Glass.Btn.Primary" android:layout_marginTop="24dp" android:text="Simpan"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnHapus034"
+            style="@style/Glass.Btn.Danger" android:layout_marginTop="12dp"
+            android:text="Hapus Transaksi" android:visibility="gone"/>
+    </LinearLayout>
+</ScrollView>

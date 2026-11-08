@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:fitsSystemWindows="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center" android:padding="24dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp" android:background="@drawable/bg_glass">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ExpenseTracker" android:textSize="28sp" android:textStyle="bold"
+                android:textColor="#1C1C1E"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Masuk untuk mencatat keuanganmu" android:textColor="#6E6E73"
+                android:layout_marginTop="4dp"/>
+            <EditText android:id="@+id/etUsername021" style="@style/Glass.Input"
+                android:layout_marginTop="20dp" android:hint="Username" android:inputType="text"/>
+            <EditText android:id="@+id/etPassword021" style="@style/Glass.Input"
+                android:layout_marginTop="12dp" android:hint="Password" android:inputType="textPassword"/>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnMasuk021"
+                style="@style/Glass.Btn.Primary" android:layout_marginTop="20dp" android:text="Masuk"/>
+            <TextView android:id="@+id/tvDaftar021" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp" android:padding="8dp"
+                android:text="Belum punya akun? Daftar" android:textColor="#007AFF"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

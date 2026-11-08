@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:fitsSystemWindows="true">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:paddingTop="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="24dp" android:text="Transaksi"
+                android:textSize="28sp" android:textStyle="bold" android:textColor="#1C1C1E"/>
+            <EditText android:id="@+id/etCari155" style="@style/Glass.Input"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="12dp"
+                android:hint="Cari keterangan atau kategori" android:inputType="text"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_margin="16dp" android:padding="4dp" android:background="@drawable/bg_input">
+                <Spinner android:id="@+id/spFilter155" android:layout_width="match_parent"
+                    android:layout_height="48dp"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv155"
+                android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+                android:clipToPadding="false" android:paddingBottom="88dp"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvKosong155" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center"
+            android:gravity="center" android:visibility="gone"
+            android:text="Belum ada transaksi.\nKetuk + Tambah untuk mulai mencatat."
+            android:textColor="#6E6E73"/>
+
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnTambah155"
+            style="@style/Glass.Btn.Primary" android:layout_width="wrap_content"
+            android:layout_gravity="bottom|end" android:layout_margin="20dp"
+            android:paddingStart="28dp" android:paddingEnd="28dp" android:text="+ Tambah"/>
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav155" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@drawable/bg_nav"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:menu="@menu/menu_bottom" app:itemIconTint="@color/nav_item"
+        app:itemTextColor="@color/nav_item" app:labelVisibilityMode="labeled" app:elevation="0dp"/>
+</LinearLayout>
